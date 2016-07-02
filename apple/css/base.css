@@ -1,0 +1,17 @@
+body,p,input,textarea,ul,li,ol,dl,dd,dt,form,h1,h2,h3,h4,h5,h6,pre{margin:0;padding:0;list-style:none;}/*�������߾���ڱ߾�*/
+b,em,strong,i{font-weight:normal;font-style:normal;list-style:none}/*font-weightΪ�Ƿ�Ӵ֣�font-style����ֵitalicΪб��*/
+img{border:0}
+div{margin:0}
+a{text-decoration:none;margin:0;padding:0;}
+body{
+    font-family: "微软雅黑"
+}
+.mar{
+    margin:0 auto;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}

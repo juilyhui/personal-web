@@ -1,0 +1,138 @@
+@import "var.less";
+
+.res(s);
+
+.container {
+  & {
+    width: (@width1)-100px;
+    height: 100%;
+    margin:0 auto;
+    .clear()
+  }
+  &-fluid {
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+    .clear()
+  }
+}
+
+.container > .row {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container-fluid > .row {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/*响应式的列*/
+.res(@type,@i:0) when(@i<=@cols) {
+  .container>.row>.col-@{type}-@{i}{
+    float: left;
+    width:@i/@cols*100%;
+  }
+  .container-fluid>.row>.col-@{type}-@{i}{
+    float: left;
+    width:@i/@cols*100%;
+  }
+  /*调整一个的位置*/
+  /*offsetl 往左放
+   *offsetr 往右放
+   */
+  .container>.row>.col-@{type}-offsetl-@{i}{
+    margin-left:-(@i/@cols*100%);
+  }
+  .container>.row>.col-@{type}-offsetr-@{i}{
+    margin-left:@i/@cols*100%
+  }
+  .container-fluid>.row>.col-@{type}-offsetl-@{i}{
+    margin-left:-(@i/@cols*100%);
+  }
+  .container-fluid>.row>.col-@{type}-offsetr-@{i}{
+    margin-left:@i/@cols*100%
+  }
+  /*调整多个的位置*/
+  /*push 往右放
+   *@{i} 移动几个列
+   */
+  .container>.row>.col-@{type}-push-@{i}{
+    position: relative;
+    left:@i/@cols*100%
+  }
+  .container>.row>.col-@{type}-pull-@{i}{
+    position: relative;
+    right:@i/@cols*100%
+  }
+  .container-fluid>.row>.col-@{type}-push-@{i}{
+    position: relative;
+    left:@i/@cols*100%
+  }
+  .container-fluid>.row>.col-@{type}-pull-@{i}{
+    position: relative;
+    right:@i/@cols*100%
+  }
+  /*隐藏元素*/
+  .container>.row>.col-@{type}-hid{
+    display: none;
+  }
+  .res(@type,@i+1);
+}
+
+
+
+@media screen and (min-width:@width1){
+  .container{
+    width: @width1;
+  }
+  .hotbrand-content,.headinner,.cbbottom-inner,.centerbanner-top,.hotbrand-head,.softbanner,.floor,.bbinner-bottom,.topnav-inner{
+    width:(@width1)-100px;
+  }
+  .topnav-top1{
+    right:100px;
+  }
+  .res(m);
+}
+
+@media screen and (min-width:@width2){
+  .container{
+    width: @width2;
+  }
+  .hotbrand-content,.headinner,.cbbottom-inner,.centerbanner-top,.hotbrand-head,.softbanner,.floor,.bbinner-bottom,.topnav-inner{
+    width:(@width2)-100px;
+  }
+  .topnav-top1{
+    left:400px;
+  }
+  .res(l);
+}
+/*清除浮动撑大父元素的影响*/
+.clear(){
+  & :after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+
+
+
+
+
+
+
+.hbcontent-box{
+  height:25%;
+}
+.bbinner-topbox{
+  float:left;height:50px;
+}
+.topnav-left{
+  overflow: hidden;
+}
+.topnav-center{
+  padding-left:8px;
+}

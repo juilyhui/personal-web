@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/lless.css">
+    <link rel="stylesheet" href="css/apple.css">
+    <script src="js/jquery.js"></script>
+    <script>
+        $(window).resize(function(){
+            if($(window).width()>=740){
+                $(".top1").css("display","block");
+                $(".top2").css("display","none");
+                $(".foot1").css("display","block");
+                $(".foot2").css("display","none");
+            }else{
+                $(".top2").css("display","block");
+                $(".top1").css("display","none");
+                $(".foot2").css("display","block");
+                $(".foot1").css("display","none");
+            }
+        })
+
+        $(function () {
+           $(window).resize();
+            var flag=true;
+            $(".xiala").click(function(){
+                var num=$(this).index(".xiala");
+                if(flag){
+                    $(".shop1").eq(num).css("height","auto");
+                    flag=false;
+                }else{
+                    $(".shop1").css("height","0px");
+                    flag=true;
+                }
+            })
+
+            
+
+        })
+    </script>
+</head>
+<body>
+<!--头部-->
+<div class="container-fluid top1">
+    <div class="container">
+    <div class="row">
+    <a href="#" class="title col-s-4">apple</a>
+    <a href="#" class="title col-s-4">Mac</a>
+    <a href="#" class="title col-s-4">iPad</a>
+    <a href="#" class="title col-s-4">iPhone</a>
+    <a href="#" class="title col-s-4">Watch</a>
+    <a href="#" class="title col-s-4">Music</a>
+    <a href="#" class="title col-s-4">技术支持</a>
+    <a href="#" class="title col-s-4">搜索</a>
+    <a href="#" class="title col-s-4">购买</a>
+    </div>
+    </div>
+</div>
+<div class="container-fluid top2">
+    <div class="row">
+        <a href="#" class="title col-s-12">apple</a>
+        <a href="#" class="title col-s-12">Mac</a>
+        <a href="#" class="title col-s-12">iPad</a>
+    </div>
+</div>
+<!--banner-->
+<div class="banner-box">
+    <div class="container-fluid banner b1"></div>
+   
+    
+</div>
+
+
+<!--bannerbottom-->
+<div class="container-fluid">
+    <div class="row">
+        <a href="" class="li1 list col-l-9 col-m-18 col-s-36"></a>
+        <a href="" class="li2 list col-l-9 col-m-18 col-s-36"></a>
+        <a href="" class="li3 list col-l-9 col-m-18 col-s-36"></a>
+        <a href="" class="li4 list col-l-9 col-m-18 col-s-36"></a>
+    </div>
+</div>
+<!--bottom begin-->
+<div class="foot1 container-fluid">
+    <div class="container">
+        <div class="row">
+            <ul class="shop col-s-7">
+                <li class="chanping2">选购及了解</li>
+                <li><a href="" class="chanping1">Mac</a></li>
+                <li><a href="" class="chanping1">iPad</a></li>
+                <li><a href="" class="chanping1">iPhone</a></li>
+                <li><a href="" class="chanping1">Watch</a></li>
+                <li><a href="" class="chanping1">Music</a></li>
+                <li><a href="" class="chanping1">iTunes</a></li>
+                <li><a href="" class="chanping1">iPod</a></li>
+                <li><a href="" class="chanping1">配件</a></li>
+            </ul>
+            <ul class="shop col-s-7">
+                <li class="chanping2">教育应用</li>
+                <li><a href="" class="chanping1">Mac</a></li>
+                <li><a href="" class="chanping1">iPad</a></li>
+                <li><a href="" class="chanping1">iPhone</a></li>
+                <li><a href="" class="chanping1">Watch</a></li>
+                <li><a href="" class="chanping1">Music</a></li>
+                <li><a href="" class="chanping1">iTunes</a></li>
+                <li><a href="" class="chanping1">iPod</a></li>
+                <li><a href="" class="chanping1">配件</a></li>
+            </ul>
+            <ul class="shop col-s-7">
+                <li class="chanping2">商务应用</li>
+                <li><a href="" class="chanping1">Mac</a></li>
+                <li><a href="" class="chanping1">iPad</a></li>
+                <li><a href="" class="chanping1">iPhone</a></li>
+                <li><a href="" class="chanping1">Watch</a></li>
+                <li><a href="" class="chanping1">Music</a></li>
+                <li><a href="" class="chanping1">iTunes</a></li>
+                <li><a href="" class="chanping1">iPod</a></li>
+                <li><a href="" class="chanping1">配件</a></li>
+            </ul>
+            <ul class="shop col-s-7">
+                <li class="chanping2">账户</li>
+                <li><a href="" class="chanping1">Mac</a></li>
+                <li><a href="" class="chanping1">iPad</a></li>
+                <li><a href="" class="chanping1">iPhone</a></li>
+                <li><a href="" class="chanping1">Watch</a></li>
+                <li><a href="" class="chanping1">Music</a></li>
+                <li><a href="" class="chanping1">iTunes</a></li>
+                <li><a href="" class="chanping1">iPod</a></li>
+                <li><a href="" class="chanping1">配件</a></li>
+            </ul>
+            <ul class="shop col-s-7">
+                <li class="chanping2">APPLE STORE</li>
+                <li><a href="" class="chanping1">Mac</a></li>
+                <li><a href="" class="chanping1">iPad</a></li>
+                <li><a href="" class="chanping1">iPhone</a></li>
+                <li><a href="" class="chanping1">Watch</a></li>
+                <li><a href="" class="chanping1">Music</a></li>
+                <li><a href="" class="chanping1">iTunes</a></li>
+                <li><a href="" class="chanping1">iPod</a></li>
+                <li><a href="" class="chanping1">配件</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="foot2 container-fluid">
+    <div class="xiala"><span class="xialaz">选购及了解</span><span class="kg">+</span></div>
+    <ul class="shop1">
+        <li><a href="" class="chanping1">Mac</a></li>
+        <li><a href="" class="chanping1">iPad</a></li>
+        <li><a href="" class="chanping1">iPhone</a></li>
+        <li><a href="" class="chanping1">Watch</a></li>
+        <li><a href="" class="chanping1">Music</a></li>
+        <li><a href="" class="chanping1">iTunes</a></li>
+        <li><a href="" class="chanping1">iPod</a></li>
+        <li><a href="" class="chanping1">配件</a></li>
+    </ul>
+    <div class="xiala"><span class="xialaz">教育应用</span><span class="kg">+</span></div>
+    <ul class="shop1">
+        <li><a href="" class="chanping1">Mac</a></li>
+        <li><a href="" class="chanping1">iPad</a></li>
+        <li><a href="" class="chanping1">iPhone</a></li>
+        <li><a href="" class="chanping1">Watch</a></li>
+        <li><a href="" class="chanping1">Music</a></li>
+        <li><a href="" class="chanping1">iTunes</a></li>
+        <li><a href="" class="chanping1">iPod</a></li>
+        <li><a href="" class="chanping1">配件</a></li>
+    </ul>
+    <div class="xiala"><span class="xialaz">商务应用</span><span class="kg">+</span></div>
+    <ul class="shop1">
+        <li><a href="" class="chanping1">Mac</a></li>
+        <li><a href="" class="chanping1">iPad</a></li>
+        <li><a href="" class="chanping1">iPhone</a></li>
+        <li><a href="" class="chanping1">Watch</a></li>
+        <li><a href="" class="chanping1">Music</a></li>
+        <li><a href="" class="chanping1">iTunes</a></li>
+        <li><a href="" class="chanping1">iPod</a></li>
+        <li><a href="" class="chanping1">配件</a></li>
+    </ul>
+    <div class="xiala"><span class="xialaz">账户</span><span class="kg">+</span></div>
+    <ul class="shop1">
+        <li><a href="" class="chanping1">Mac</a></li>
+        <li><a href="" class="chanping1">iPad</a></li>
+        <li><a href="" class="chanping1">iPhone</a></li>
+        <li><a href="" class="chanping1">Watch</a></li>
+        <li><a href="" class="chanping1">Music</a></li>
+        <li><a href="" class="chanping1">iTunes</a></li>
+        <li><a href="" class="chanping1">iPod</a></li>
+        <li><a href="" class="chanping1">配件</a></li>
+    </ul>
+    <div class="xiala"><span class="xialaz">APPLE STORE</span><span class="kg">+</span></div>
+    <ul class="shop1">
+        <li><a href="" class="chanping1">Mac</a></li>
+        <li><a href="" class="chanping1">iPad</a></li>
+        <li><a href="" class="chanping1">iPhone</a></li>
+        <li><a href="" class="chanping1">Watch</a></li>
+        <li><a href="" class="chanping1">Music</a></li>
+        <li><a href="" class="chanping1">iTunes</a></li>
+        <li><a href="" class="chanping1">iPod</a></li>
+        <li><a href="" class="chanping1">配件</a></li>
+    </ul>
+  
+</div>
+</body>
+</html>

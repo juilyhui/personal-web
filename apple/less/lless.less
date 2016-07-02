@@ -1,0 +1,79 @@
+@width1:740px;
+@width2:1070px;
+@cols:36px;
+
+*{box-sizing: border-box}
+.container{
+  &{
+    width:(@width1)-20px;height:auto;overflow: hidden;margin:0 auto;
+    .clear();
+  }
+  &>.row{
+    width:100%;height: auto;overflow:hidden;
+  }
+  &-fluid{
+    width:100%;height:auto;overflow: hidden;margin:0 auto;
+    .clear();
+  }
+  &-fluid>.row{
+    width:100%;height:auto;overflow: hidden;
+  }
+}
+.clear(){
+  &:before,&:after{
+    content:"";display:block;
+  }
+  &:after{
+    clear:both;
+  }
+}
+
+
+.res(@type,@i:1) when (@i<=@cols){
+  .container>.row>.col-@{type}-@{i}{
+    width:@i/@cols*100%;float: left;height:100%;
+  }
+  .container-fluid>.row>.col-@{type}-@{i}{
+    width:@i/@cols*100%;float: left;height:100%;
+  }
+  .container>.row>.col-@{type}-offsetr-@{i}{
+    margin-left:@i/@cols*100%;
+  }
+  .container>.row>.col-@{type}-offsetl-@{i}{
+    margin-left:-@i/@cols*100%;
+  }
+  .container-fluid>.row>.col-@{type}-offsetr-@{i}{
+    margin-left:@i/@cols*100%;
+  }
+  .container-fluid>.row>.col-@{type}-offsetl-@{i}{
+    margin-left:-@i/@cols*100%;
+  }
+  .container>.row>.col-@{type}-push-@{i}{
+    position:relative;left:@i/@cols*100%;
+  }
+  .container>.row>.col-@{type}-pull-@{i}{
+    position:relative;right:@i/@cols*100%;
+  }
+  //  .container>.row>.col-@{type}-hid{
+  //  display:none;
+  //}
+  .res(@type,@i+1);
+}
+.res(s);
+
+.col-s-hid{
+  display:none;
+}
+@media screen and (min-width:@width1){
+  .container{
+    width:@width1;
+  }
+  .res(m);
+}
+@media screen and (min-width:@width2){
+  .container{
+    width:@width2;
+  }
+  .res(l);
+
+}
